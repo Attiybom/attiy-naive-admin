@@ -88,3 +88,21 @@ export function useResize(el, cb) {
   observer.observe(el)
   return observer
 }
+
+/**
+ * @description 时间计算函数
+ * @returns {string}
+ */
+
+export function getTimeOfDay() {
+  const currentTime = new Date()
+  const currentHour = currentTime.getHours()
+
+  if (currentHour >= 5 && currentHour < 12) {
+    return '早上好！'
+  } else if (currentHour >= 12 && currentHour < 18) {
+    return '下午好！'
+  } else {
+    return '晚上好！'
+  }
+}

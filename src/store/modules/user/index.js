@@ -28,7 +28,7 @@ export const useUserStore = defineStore('user', {
     async getUserInfo() {
       try {
         const res = await api.getUser()
-        const { id, name, avatar, role } = res.data
+        const { id, username: name, avatar, roles: role } = res.data.pageData[0]
         this.userInfo = { id, name, avatar, role }
         return Promise.resolve(res.data)
       } catch (error) {
@@ -44,6 +44,16 @@ export const useUserStore = defineStore('user', {
       resetRouter()
       this.$reset()
       toLogin()
+    },
+    // 切换角色
+    async changeRole(role) {
+      const { resetTags } = useTagsStore()
+      const { resetPermission } = usePermissionStore()
+      resetTags()
+      resetPermission()
+      resetRouter()
+      this.$reset()
+      this.userInfo.role = role
     },
     setUserInfo(userInfo = {}) {
       this.userInfo = { ...this.userInfo, ...userInfo }

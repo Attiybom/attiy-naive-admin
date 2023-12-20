@@ -6,12 +6,12 @@
       dark:bg-dark
     >
       <div hidden w-380 px-20 py-35 md:block>
-        <img src="@/assets/images/login_banner.webp" w-full alt="login_banner" />
+        <img src="@/assets/images/kedaya.jpg" w-full alt="login_banner" />
       </div>
 
       <div w-320 flex-col px-20 py-35>
         <h5 f-c-c text-24 font-normal color="#6a6a6a">
-          <img src="@/assets/images/logo.png" height="50" class="mr-10" />
+          <img src="@/assets/images/pokemon.jpg" height="50" class="mr-10" />
           {{ title }}
         </h5>
         <div mt-32>
