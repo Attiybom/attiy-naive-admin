@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory, createWebHashHistory } from 'vue-router'
 import { setupRouterGuard } from './guard'
 import { basicRoutes, EMPTY_ROUTE, NOT_FOUND_ROUTE } from './routes'
-import { getToken, isNullOrWhitespace } from '@/utils'
+import { getToken, isNullOrWhitespace, getTimeOfDay } from '@/utils'
 import { useUserStore, usePermissionStore } from '@/store'
 
 const isHash = import.meta.env.VITE_USE_HASH === 'true'
@@ -50,18 +50,19 @@ export async function addDynamicRoutes() {
     router.addRoute(NOT_FOUND_ROUTE)
 
     window.$notification?.success({
-      title: '🎉🎉🎉 2.0 全栈版本开源了！',
+      title: '欢迎回来！',
       content: () =>
         h(
           'span',
           {},
-          '2.0为全栈版本，提供前端+后端，全新重构，全面简化，',
-          h(
-            'a',
-            { href: 'https://admin.isme.top', target: '__blank' },
-            '👉体验 https://admin.isme.top'
-          )
+          getTimeOfDay()
+          // h(
+          //   'a',
+          //   { href: 'https://admin.isme.top', target: '__blank' },
+          //   '👉体验 https://admin.isme.top'
+          // )
         ),
+      duration: 1000,
     })
   } catch (error) {
     console.error(error)

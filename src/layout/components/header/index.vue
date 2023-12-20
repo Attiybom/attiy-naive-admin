@@ -6,8 +6,8 @@
   <div ml-auto flex items-center>
     <MessageNotification />
     <ThemeMode />
-    <GiteeSite />
-    <GithubSite />
+    <!-- <GiteeSite />
+    <GithubSite /> -->
     <FullScreen />
     <UserAvatar />
   </div>
@@ -18,8 +18,8 @@ import BreadCrumb from './components/BreadCrumb.vue'
 import MenuCollapse from './components/MenuCollapse.vue'
 import FullScreen from './components/FullScreen.vue'
 import UserAvatar from './components/UserAvatar.vue'
-import GithubSite from './components/GithubSite.vue'
-import GiteeSite from './components/GiteeSite.vue'
+// import GithubSite from './components/GithubSite.vue'
+// import GiteeSite from './components/GiteeSite.vue'
 import ThemeMode from './components/ThemeMode.vue'
 import MessageNotification from './components/MessageNotification.vue'
 </script>

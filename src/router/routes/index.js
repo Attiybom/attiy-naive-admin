@@ -18,6 +18,17 @@ export const basicRoutes = [
     },
   },
 
+  // 个人中心
+  // {
+  //   name: 'Person',
+  //   path: '/person',
+  //   component: () => import('@/views/person/index.vue'),
+  //   isHidden: false,
+  //   meta: {
+  //     title: '个人中心',
+  //   },
+  // },
+
   {
     name: 'ExternalLink',
     path: '/external-link',
@@ -44,14 +55,14 @@ export const basicRoutes = [
           icon: 'simple-icons:gitee',
         },
       },
-      {
-        name: 'LinkDocs',
-        path: 'https://zclzone.github.io/vue-naive-admin-docs',
-        meta: {
-          title: '文档 - vuepress',
-          icon: 'mdi:vuejs',
-        },
-      },
+      // {
+      //   name: 'LinkDocs',
+      //   path: 'https://zclzone.github.io/vue-naive-admin-docs',
+      //   meta: {
+      //     title: '文档 - vuepress',
+      //     icon: 'mdi:vuejs',
+      //   },
+      // },
     ],
   },
 ]
