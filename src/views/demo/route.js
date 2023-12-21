@@ -8,7 +8,7 @@ export default {
   meta: {
     title: '示例页面',
     icon: 'uil:pagelines',
-    role: ['admin'],
+    role: ['SUPER_ADMIN', 'ROLE_QA'],
     requireAuth: true,
     order: 3,
   },
@@ -20,7 +20,7 @@ export default {
       meta: {
         title: 'CRUD表格',
         icon: 'ic:baseline-table-view',
-        role: ['admin'],
+        role: ['SUPER_ADMIN', 'ROLE_QA'],
         requireAuth: true,
         keepAlive: true,
       },
@@ -32,7 +32,7 @@ export default {
       meta: {
         title: 'MD编辑器',
         icon: 'ri:markdown-line',
-        role: ['admin'],
+        role: ['SUPER_ADMIN', 'ROLE_QA'],
         requireAuth: true,
         keepAlive: true,
       },
@@ -44,7 +44,7 @@ export default {
       meta: {
         title: '富文本编辑器',
         icon: 'ic:sharp-text-rotation-none',
-        role: ['admin'],
+        role: ['SUPER_ADMIN'],
         requireAuth: true,
         keepAlive: true,
       },
@@ -56,7 +56,7 @@ export default {
       meta: {
         title: '图片上传',
         icon: 'mdi:upload',
-        role: ['admin'],
+        role: ['SUPER_ADMIN'],
         requireAuth: true,
         keepAlive: true,
       },

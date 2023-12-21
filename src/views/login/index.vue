@@ -93,8 +93,8 @@ const router = useRouter()
 const { query } = useRoute()
 
 const loginInfo = ref({
-  name: 'admin',
-  password: '',
+  name: 'test123',
+  password: 'qwe123',
 })
 
 initLoginInfo()
@@ -143,9 +143,8 @@ async function handleLogin() {
 
 async function handleRegister() {
   const { name, password } = loginInfo.value
-  const res = await api.register({ username: name, password: password.toString() })
-  console.log('handleRegister-res', res)
-
+  await api.register({ username: name, password: password.toString() })
+  // console.log(res)
   // $message.success('注册成功')
   // // 跳转
   // router.push('/')

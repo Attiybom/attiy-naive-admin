@@ -94,7 +94,6 @@ function getIcon(meta) {
 }
 
 function handleMenuSelect(key, item) {
-  console.log('handleMenuSelect', key, item)
   if (isExternal(item.path)) {
     window.open(item.path)
   } else {

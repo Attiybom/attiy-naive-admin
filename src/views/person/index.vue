@@ -4,7 +4,6 @@ import api from './api'
 import { isValidEmail } from '@/utils'
 
 const userStore = useUserStore()
-console.log('userStore', userStore.profile)
 let { profile = [], userId } = userStore
 
 // 修改密码
@@ -116,24 +115,18 @@ const genderOptions = [
 ]
 
 const handleOpenProfileModal = () => {
-  console.log('handleOpenProfileModal')
   showProfileModal.value = true
 }
 
 const handleCancelProfileModal = () => {
-  console.log('handleCancelProfileModal')
   showProfileModal.value = false
 }
 
 const handleValidateProfileClick = async () => {
-  console.log('handleValidateProfileClick')
-  console.log('profileFormValue', profileFormValue, userId)
   const res = await api.updateProfile(userId, profileFormValue)
-  console.log('res', res)
   if (res.data) {
     await userStore.getUserInfo()
     // 更新 profile
-    console.log('userStore.profile', userStore.profile)
     profile = userStore.profile
     showProfileModal.value = false
   }
