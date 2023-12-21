@@ -63,6 +63,17 @@
           >
             登录
           </n-button>
+          <n-button
+            h-50
+            w-full
+            rounded-5
+            text-16
+            type="primary"
+            :loading="loading"
+            @click="handleRegister"
+          >
+            注册
+          </n-button>
         </div>
       </div>
     </div>
@@ -83,7 +94,7 @@ const { query } = useRoute()
 
 const loginInfo = ref({
   name: 'admin',
-  password: '123456',
+  password: '',
 })
 
 initLoginInfo()
@@ -128,5 +139,15 @@ async function handleLogin() {
     $message.removeMessage()
   }
   loading.value = false
+}
+
+async function handleRegister() {
+  const { name, password } = loginInfo.value
+  const res = await api.register({ username: name, password: password.toString() })
+  console.log('handleRegister-res', res)
+
+  // $message.success('注册成功')
+  // // 跳转
+  // router.push('/')
 }
 </script>

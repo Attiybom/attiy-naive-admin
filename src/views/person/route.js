@@ -18,7 +18,7 @@ export default {
       component: () => import('./index.vue'),
       meta: {
         title: '个人资料',
-        // icon: 'tabler:error-404',
+        icon: 'mdi:user',
       },
     },
   ],
