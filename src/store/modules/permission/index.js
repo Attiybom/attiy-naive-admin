@@ -11,12 +11,14 @@ function hasPermission(route, role) {
   if (!role.length || !routeRole.length) return false
 
   // * 路由指定的角色包含任一登录用户角色则判定有权限
-  return role.some((item) => routeRole.includes(item))
+  // return role.some((item) => routeRole.includes(item))
+  return role.some((item) => routeRole.includes(item.code))
 }
 
 function filterAsyncRoutes(routes = [], role) {
   const ret = []
   routes.forEach((route) => {
+    // console.log('filterAsyncRoutes-route', route)
     if (hasPermission(route, role)) {
       const curRoute = {
         ...route,

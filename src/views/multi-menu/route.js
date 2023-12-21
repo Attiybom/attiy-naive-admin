@@ -7,7 +7,7 @@ export default {
   meta: {
     title: '多级菜单',
     icon: 'ic:baseline-menu',
-    role: ['admin'],
+    role: ['SUPER_ADMIN'],
     requireAuth: true,
     order: 4,
   },
@@ -19,7 +19,7 @@ export default {
       meta: {
         title: 'a-1',
         icon: 'ic:baseline-menu',
-        role: ['admin'],
+        role: ['SUPER_ADMIN'],
         requireAuth: true,
       },
       children: [
@@ -30,7 +30,7 @@ export default {
           meta: {
             title: 'a-1-1',
             icon: 'ic:baseline-menu',
-            role: ['admin'],
+            role: ['SUPER_ADMIN'],
             requireAuth: true,
           },
         },
@@ -41,7 +41,7 @@ export default {
           meta: {
             title: 'a-1-2',
             icon: 'ic:baseline-menu',
-            role: ['admin'],
+            role: ['SUPER_ADMIN'],
             requireAuth: true,
           },
         },
@@ -54,7 +54,7 @@ export default {
       meta: {
         title: 'a-2',
         icon: 'ic:baseline-menu',
-        role: ['admin'],
+        role: ['SUPER_ADMIN'],
         requireAuth: true,
       },
       children: [
@@ -65,7 +65,7 @@ export default {
           meta: {
             title: 'a-2-1（单个子菜单）',
             icon: 'ic:baseline-menu',
-            role: ['admin'],
+            role: ['SUPER_ADMIN'],
             requireAuth: true,
           },
         },
