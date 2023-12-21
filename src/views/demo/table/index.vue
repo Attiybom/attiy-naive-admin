@@ -93,6 +93,11 @@ import { NButton, NSwitch } from 'naive-ui'
 import { formatDateTime, renderIcon, isNullOrUndef } from '@/utils'
 import { useCRUD } from '@/composables'
 import api from './api'
+import { useUserStore } from '@/store'
+
+const userStore = useUserStore()
+// console.log('userStore', userStore)
+const { userInfo } = userStore
 
 defineOptions({ name: 'Crud' })
 
@@ -224,7 +229,7 @@ const {
   modalFormRef,
 } = useCRUD({
   name: '文章',
-  initForm: { author: '大脸怪' },
+  initForm: { author: userInfo?.profile?.nickName || userInfo.name },
   doCreate: api.addPost,
   doDelete: api.deletePost,
   doUpdate: api.updatePost,
