@@ -106,3 +106,14 @@ export function getTimeOfDay() {
     return '晚上好！'
   }
 }
+
+/**
+ * @description 判断邮箱格式是否有效
+ * @returns {boolean}
+ */
+
+export function isValidEmail(email) {
+  // 这个正则表达式覆盖了大多数常见的电子邮件格式
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+  return regex.test(email)
+}

@@ -46,6 +46,7 @@
     "vue": "3.3.4",
     "vue-echarts": "^6.6.1",
     "vue-router": "^4.2.5",
+    "xijs": "^1.2.6",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {

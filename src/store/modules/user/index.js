@@ -23,13 +23,17 @@ export const useUserStore = defineStore('user', {
     role() {
       return this.userInfo?.role || []
     },
+    profile() {
+      return this.userInfo?.profile || {}
+    },
   },
   actions: {
     async getUserInfo() {
       try {
-        const res = await api.getUser()
-        const { id, username: name, avatar, roles: role } = res.data.pageData[0]
-        this.userInfo = { id, name, avatar, role }
+        const res = await api.getUserInfo()
+        const { id, username: name, roles: role, profile } = res.data
+        const { avatar } = profile
+        this.userInfo = { id, name, avatar, role, profile }
         return Promise.resolve(res.data)
       } catch (error) {
         return Promise.reject(error)

@@ -51,13 +51,13 @@ const options = [
   {
     label: '个人中心',
     key: 'personalCenter',
-    icon: renderIcon('mdi:exit-to-app', { size: '14px' }),
+    icon: renderIcon('mdi:user', { size: '14px' }),
   },
-  {
-    label: '切换角色',
-    key: 'changeRole',
-    icon: renderIcon('mdi:exit-to-app', { size: '14px' }),
-  },
+  // {
+  //   label: '切换角色',
+  //   key: 'changeRole',
+  //   icon: renderIcon('mdi:users', { size: '14px' }),
+  // },
   {
     label: '退出登录',
     key: 'logout',
